@@ -4,14 +4,14 @@ using static ArtGallery.Function;
 
 namespace ArtGallery
 {
-    class Program
+    internal class Program
     {
-        static void Main()
+        private static void Main()
         {
-            Gallery gallery = new Gallery();
+            var gallery = new Gallery();
             Menu();
             Console.Write("Enter your number of task: ");
-            string task = Console.ReadLine();
+            var task = Console.ReadLine();
             switch (task)
             {
                 case "1":
@@ -39,7 +39,7 @@ namespace ArtGallery
             Main();
         }
 
-        static void Menu()
+        private static void Menu()
         {
             Console.WriteLine("1. Create an Artist");
             //Console.WriteLine("2. Create a Curator");

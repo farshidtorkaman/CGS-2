@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections;
 
 namespace CGS
 {
     public class Artists : CollectionBase
     {
-        private static Artists instance;
+        private static Artists _instance;
         public void Add(Artist artist)
         {
             List.Add(artist);
@@ -22,23 +19,16 @@ namespace CGS
         {
             get
             {
-                if (instance == null)
-                    instance = new Artists();
+                if (_instance == null)
+                    _instance = new Artists();
 
-                return instance;
+                return _instance;
             }
         }
-
-        public Artists this[int ArtistIndex]
+        public Artists this[int artistIndex]
         {
-            get
-            {
-                return (Artists)List[ArtistIndex];
-            }
-            set
-            {
-                List[ArtistIndex] = value;
-            }
+            get => (Artists)List[artistIndex];
+            set => List[artistIndex] = value;
         }
     }
 }

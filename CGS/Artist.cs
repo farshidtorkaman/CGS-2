@@ -15,8 +15,7 @@ namespace CGS
 
         public override string ToString()
         {
-            return "\nName: " + base.FirstName + "\nFirstname " +
-            base.LastName + "\nArtisteID: " + ArtistId;
+            return $"\nName: {base.FirstName}\nFirstname {base.LastName}\nArtisteID: {ArtistId}";
         }
     }
 }
